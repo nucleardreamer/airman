@@ -1,12 +1,12 @@
 {
   "name": "airman",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "companion app for stratux",
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/oak index.js",
     "rebuild": "node_modules/.bin/electron-rebuild -v 1.6.11 -o somenativemodule",
-    "test": "exit 0;"
+    "test": "node_modules/.bin/standard"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,10 @@
     "aviation",
     "stratux",
     "rtl-sdr",
+    "raspberry pi",
+    "foreflight",
     "ADS-B",
+    "ADSB",
     "SDR",
     "airplanes",
     "aircraft",
@@ -43,6 +46,7 @@
     "walk-sync": "~0.3.2"
   },
   "devDependencies": {
-    "fontello-cli": "~0.4.0"
+    "fontello-cli": "~0.4.0",
+    "standard": "~10.0.3"
   }
 }

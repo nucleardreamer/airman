@@ -1,0 +1,14 @@
+---
+version: '2'
+services:
+  airman:
+    build: .
+    container_name: airman
+    image: nucleardreamer/airman:latest
+    network_mode: host
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /run/udev:/run/udev
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/shm:/dev/shm
