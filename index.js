@@ -20,6 +20,10 @@ const logger = tools.logger({
   pretty: process.env.NODE_ENV !== 'production'
 })
 
+logger.info({
+  msg: 'Airman Init'
+})
+
 let publicPath = join(__dirname, 'public')
 let viewsPath = join(__dirname, 'views')
 
