@@ -3,7 +3,7 @@
 VERSION="0.0.1";
 BASE="nucleardreamer/airman:$VERSION";
 
-MANIFEST_TOOL_PATH="/usr/bin/manifest-tool";
+MANIFEST_TOOL_PATH=$(which manifest-tool);
 
 UNAME_ARCH=$(uname -m);
 
