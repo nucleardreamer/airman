@@ -10,5 +10,7 @@
 .icon-off:before { content: '\e808'; } /* '' */
 .icon-signal:before { content: '\e809'; } /* '' */
 .icon-flight:before { content: '\e80a'; } /* '' */
+.icon-clock:before { content: '\e80b'; } /* '' */
 .icon-play-circled:before { content: '\e80c'; } /* '' */
 .icon-pause-circled:before { content: '\e810'; } /* '' */
+.icon-microchip:before { content: '\f2db'; } /* '' */

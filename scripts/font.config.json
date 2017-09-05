@@ -83,6 +83,18 @@
       "css": "flight",
       "code": 59402,
       "src": "elusive"
+    },
+    {
+      "uid": "1cb3652ffb3492344fa3a675c3ff3290",
+      "css": "microchip",
+      "code": 62171,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "css": "clock",
+      "code": 59403,
+      "src": "entypo"
     }
   ]
 }

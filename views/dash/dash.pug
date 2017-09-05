@@ -1,5 +1,6 @@
 dash
-  h1 dashboard
-  h2 CPU: {{ cpu }}
-  h2 Uptime: {{ uptime }}
-  h2 Disk Free: {{ status.DiskBytesFree }}
+  .stats
+    .stat      
+      .icon-microchip {{ cpu }}
+    .stat
+      .icon-clock {{ uptime }}

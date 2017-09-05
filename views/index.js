@@ -64,6 +64,6 @@ window.angular.module('airman')
     }).then(function (res) {
       $rootScope.$broadcast('status', res.data)
     })
-  }, 2500)
+  }, 1000)
   oak.ready()
 })

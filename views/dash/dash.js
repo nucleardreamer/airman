@@ -9,9 +9,9 @@ window.angular.module('airman')
     let upH = parseInt((uptime / 1000 - 86400 * upD) / 3600)
     let upM = parseInt((uptime / 1000 - 86400 * upD - 3600 * upH) / 60)
     let upS = parseInt((uptime / 1000 - 86400 * upD - 3600 * upH - 60 * upM))
-    $scope.status.uptime = String(upD + '/' + ((upH < 10) ? '0' + upH : upH) + ':' + ((upM < 10) ? '0' + upM : upM) + ':' + ((upS < 10) ? '0' + upS : upS))
+    $scope.uptime = `${((upH < 10) ? '0' + upH : upH)}:${((upM < 10) ? '0' + upM : upM)}:${((upS < 10) ? '0' + upS : upS)} (${upD} days)`
 
     let boardtemp = status.CPUTemp
-    $scope.cpu = String(boardtemp.toFixed(1) + '°C / ' + ((boardtemp * 9 / 5) + 32.0).toFixed(1) + '°F')
+    $scope.cpu = `${boardtemp.toFixed(1)}°C / ${((boardtemp * 9 / 5) + 32.0).toFixed(1)}°F`
   })
 })
