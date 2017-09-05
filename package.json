@@ -1,0 +1,48 @@
+{
+  "name": "airman",
+  "version": "0.0.0",
+  "description": "companion app for stratux",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/oak index.js",
+    "rebuild": "node_modules/.bin/electron-rebuild -v 1.6.11 -o somenativemodule",
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nucleardreamer/airman.git"
+  },
+  "keywords": [
+    "aviation",
+    "stratux",
+    "rtl-sdr",
+    "ADS-B",
+    "SDR",
+    "airplanes",
+    "aircraft",
+    "electron",
+    "oak"
+  ],
+  "author": "Flynn Joffray <nucleardreamer@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nucleardreamer/airman/issues"
+  },
+  "homepage": "https://github.com/nucleardreamer/airman#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "~1.0.6",
+    "angular": "~1.6.6",
+    "angular-animate": "~1.6.6",
+    "express": "~4.15.4",
+    "lodash": "~4.17.4",
+    "moment": "^2.18.1",
+    "oak": "~3.2.0",
+    "oak-tools": "~0.5.3",
+    "pug": "~2.0.0-rc.3",
+    "stylus": "~0.54.5",
+    "walk-sync": "~0.3.2"
+  },
+  "devDependencies": {
+    "fontello-cli": "~0.4.0"
+  }
+}

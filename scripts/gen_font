@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+PUBLIC="../public"
+
+exec ../node_modules/.bin/fontello-cli install \
+  --config font.config.json \
+  --css $PUBLIC/icons \
+  --font $PUBLIC/font
