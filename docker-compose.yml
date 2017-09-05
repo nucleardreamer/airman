@@ -4,11 +4,20 @@ services:
   airman:
     build: .
     container_name: airman
-    image: nucleardreamer/airman:0.0.1
+    image: docker.io/nucleardreamer/airman
     network_mode: host
-    devices:
-      - /dev/dri:/dev/dri
+    # devices:
+    #   - /dev/dri:/dev/dri
     volumes:
       - /run/udev:/run/udev
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev/shm:/dev/shm
+  watchtower:
+    image: v2tec/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+    # environment:
+    #   REPO_USER: ${REPO_USER}
+    #   REPO_PASS: ${REPO_PASS}
