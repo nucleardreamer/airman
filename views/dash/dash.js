@@ -2,7 +2,7 @@ window.angular.module('airman')
 .controller('dashController', function ($rootScope, $scope, $window, $state, oak, _, settings) {
   $scope.settings = settings
   $rootScope.$on('status', function (e, status) {
-    console.log('status', status)
+    // console.log('status', status)
     $scope.status = status
     var uptime = status.Uptime
     let upD = parseInt((uptime / 1000) / 86400)

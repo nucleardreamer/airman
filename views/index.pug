@@ -5,5 +5,10 @@ html(ng-app='airman')
     meta(name='viewport', content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
     link(href='/icons/icons.css', rel='stylesheet', type='text/css')
     link(href='/index.css', rel='stylesheet', type='text/css')
-  body(ng-controller="mainController")
+  body(
+    ng-controller="mainController",
+    hm-tap="bodyClick($event)"
+  )
+    ripples
+      .ripple(ng-repeat="r in ripples", ng-style="{ top: r.y + 'px', left: r.x + 'px' }")
     wrapper(ui-view="")

@@ -89,8 +89,14 @@ function loadWindow () {
         name: 'lodash',
         path: 'lodash'
       },
+      {
+        name: 'uuid',
+        path: 'uuid'
+      },
+      join(__dirname, 'node_modules', 'hammerjs'),
       join(__dirname, 'node_modules', 'angular'),
       join(__dirname, 'node_modules', 'angular-animate'),
+      join(__dirname, 'node_modules', 'angular-hammer'),
       join(__dirname, 'node_modules', '@uirouter/angularjs'),
       ...jsFiles
     ]

@@ -14,11 +14,13 @@ window.getScope = function () {
 let app = window.angular
   .module('airman', [
     'ngAnimate',
+    'hmTouchEvents',
     'ui.router'
   ])
   .constant('apiBase', 'http://10.1.0.134')
   .constant('oak', window.oak)
   // use lodash in controllers
+  .constant('uuid', window.uuid)
   .constant('_', window.lodash)
   // use lodash in views
   .run(function ($rootScope) {
@@ -55,7 +57,7 @@ app.config(function (
 })
 
 window.angular.module('airman')
-.controller('mainController', function mainController ($rootScope, $scope, $http, $interval, oak, apiBase) {
+.controller('mainController', function mainController ($rootScope, $scope, $http, $interval, $timeout, uuid, oak, _, apiBase) {
   $scope.settings = false
   $interval(function () {
     $http({
@@ -65,5 +67,18 @@ window.angular.module('airman')
       $rootScope.$broadcast('status', res.data)
     })
   }, 1000)
+
+  $scope.ripples = []
+
+  $scope.bodyClick = function ({ center: { x, y } }) {
+    let id = uuid.v4()
+    $scope.ripples.push({
+      x, y, id
+    })
+    $timeout(function () {
+      _.remove($scope.ripples, { id })
+    }, 500)
+  }
+
   oak.ready()
 })

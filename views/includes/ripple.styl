@@ -1,0 +1,36 @@
+ripples
+  position absolute
+  height 100%
+  width 100%
+  top 0
+  left 0
+  pointer-events none
+  z-index 999
+
+makeRipple(size = 2em, duration = .4s, count = infinite, thickness = 1px, delay = 0s)
+  position absolute
+  width size
+  height size
+  margin-top size * -.5
+  margin-left size * -.5
+  border thickness solid rgba(#fff, .7)
+  opacity 0
+  animation-name rippleOut
+  animation-duration duration
+  animation-timing-function ease-out
+  animation-iteration-count count
+  animation-delay delay
+  animation-fill-mode forwards
+
+.ripple
+  makeRipple(count: 1)
+
+@keyframes rippleOut
+  0%
+    transform rotate(45deg) scale(.2)
+    opacity: 0
+  50%
+    opacity 1
+  100% 
+    transform rotate(45deg) scale(2.2)
+    opacity 0
